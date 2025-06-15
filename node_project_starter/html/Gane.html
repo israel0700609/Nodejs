@@ -1,0 +1,136 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/game.css">
+</head>
+<body onload="startgame()">
+    <nav class="sidebar">
+        <h2 class="menu">Menu</h2>
+        <ul class="nav-menu">
+            <li>
+                <button onclick="aboutme()" class="nav-link">
+                    <span class="nav-icon">👦</span>
+                    About me
+                </button>
+            </li>
+            <li>
+                <button onclick="dream()" class="nav-link">
+                    <span class="nav-icon">💭</span>
+                    My Dream
+                </button>
+            </li>
+            <li>
+                <button onclick="pardes()" class="nav-link">
+                    <span class="nav-icon">🏡</span>
+                    My city
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="title">Mines and Diamonds Game</h1>
+    <div class="grid" align="center">
+    <div class="buttons">
+        <br>
+        Bet Amount <br>
+        <div class="bet-input">
+            <input type="number" id="beta" class="ng">
+            <button onclick="bets5()" class="bu">0.5X</button>
+            <button onclick="bets2()" class="bu">2X</button>
+        </div>
+        <br>
+        
+        Choose the amount of Mines
+        <br>
+        <div class="dropdown-container">
+            <select id="mines" class="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <br>
+
+        <button onclick="placeBet()" class="bet">Bet</button>
+        <br>
+        
+        <button onclick="leave()" class="leave">Take Profit</button>
+        <h2 id="Profit">Profit:</h2>
+    </div>
+
+    
+    <div id="con" class="con"></div>
+
+    
+    </div>
+
+<div id="betModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Close Button -->
+        <h3 class="betreport"></h3>
+        <br>
+        <p class="p" id="p">
+
+        </p>
+        <button onclick="confirmBet()" class="confirm">Confirm Bet</button>
+    </div>
+</div>
+
+<div id="Repmodal" class="modal1">
+    <div class="modal-content1">
+        <h3 class="betreport"></h3>
+        <br>
+        <p class="p1" id="p1">
+
+        </p>
+        <button onclick="confirmrep()" class="confirm1">Confirm Report</button>
+    </div>
+</div>
+
+<!-- Your Balance Section -->
+<h3 id="money">Your Balance: 5000$</h3>
+
+<button class="how1" onclick="howtoplay()" >How to play</button>
+<div id="howto" class="how">
+    <div class="how-content">
+        <span class="close-btn" onclick="closehow()">&times;</span> <!-- Close Button -->
+
+        <h3 class="betreport"></h3>
+        <br>
+        <p class="p2" id="p2">
+
+        </p>
+    </div>
+</div>
+
+<button onclick="restart()" class="res">Reset</button>
+
+
+
+<div id="error" class="er">
+    <div class="error-content">
+        <p class="err" id="err"></pclass></p>
+    </div>
+</div>
+
+
+
+<script src="../services/Game.js"></script>
+</body>

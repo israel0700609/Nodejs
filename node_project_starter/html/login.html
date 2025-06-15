@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Welcome Back</title>
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="card-header">
+                <h1 class="logo">Welcome</h1>
+                <p class="subtitle">Sign in to your account</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            
+            <div class="divider">
+                <span>or</span>
+            </div>
+            
+            
+            <div class="signup-prompt">
+                <p>Don't have an account? <a href="#" class="signup-link" id="signupLink">Sign up</a></p>
+            </div>
+        </div>
+        
+        <div class="login-card signup-card" id="signupCard" style="display: none;">
+            <div class="card-header">
+                <h1 class="logo">Create Account</h1>
+                <p class="subtitle">Join us today</p>
+            </div>
+            
+            <form class="login-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                
+              
+                <button type="submit" class="login-btn">Create Account</button>
+            </form>
+            
+            <div class="signup-prompt">
+                <p>Already have an account? <a href="#" class="signup-link" id="loginLink">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Toggle between login and signup forms
+        document.getElementById('signupLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('loginForm').parentElement.style.display = 'none';
+            document.getElementById('signupCard').style.display = 'block';
+        });
+        
+        document.getElementById('loginLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('signupCard').style.display = 'none';
+            document.getElementById('loginForm').parentElement.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
